@@ -1,10 +1,7 @@
 .UserInformation{
     display:inline-flex;
 }
-.userAvatar>img{
-    height: 50px;
-    border-radius: 50%;
-}
+
 .email{
     font-size: 15px;
 }
