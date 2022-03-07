@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar } from "../../Avatar/Avatar";
+import { Email } from "../../Email/Email";
 import { Name } from "../../Name/Name";
 import "./User.css";
 
@@ -16,7 +17,9 @@ export const User = (props) => {
             <div className="name">
               <Name name={props.user.Name} />
             </div>
-            <div className="email">{props.user.Email}</div>
+            <div className="email">
+              <Email email={props.user.Email}/> 
+              </div>
           </div>
         </div>
       </td>
