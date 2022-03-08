@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { CardHover } from "../../CardHover/CardHover";
 import { User } from "../User/User";
 import './UserTable.css'
 
@@ -26,7 +27,7 @@ const UserTable = () => {
       </div>
 
     <div className="col-4">
-              {/* 546465 */}
+             <CardHover/>
     </div>
       </div>
     </>
