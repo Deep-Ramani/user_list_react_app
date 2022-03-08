@@ -3,7 +3,8 @@ import { Avatar } from "../../Avatar/Avatar";
 import { Email } from "../../Email/Email";
 import { Name } from "../../Name/Name";
 import "./User.css";
-import { Status } from "../Status/Status";
+import { Status } from "./Status/Status";
+import { Access } from "./Access/Access";
 
 
 export const User = (props) => {
@@ -29,7 +30,7 @@ export const User = (props) => {
       <Status status={props.user.Status}/>
       </td>
       <td>
-     
+      <Access access={props.user.Access}/>
       </td>
     </tr>
   );
