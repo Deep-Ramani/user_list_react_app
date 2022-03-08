@@ -1,0 +1,19 @@
+.CardHover{
+    margin: 0 auto;
+    padding: 100px;
+    /* position: fixed; */
+    text-align: center;
+}
+.AvatarImg1>img{
+    border-radius: 50%;
+}
+.progress-bar{
+    width: 50%;
+
+}
+.progress{
+    height: 10px!important;
+}
+.clicks{
+    display: inline-flex;
+}
