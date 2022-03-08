@@ -7,6 +7,7 @@ const UserTable = () => {
   const users = useSelector((state) => state);
   return (
     <>
+    <div className="col-12">  
       <div className="col-8">
         <table className="table">
           <thead>
@@ -22,6 +23,11 @@ const UserTable = () => {
             ))}
           </tbody>
         </table>
+      </div>
+
+    <div className="col-4">
+              {/* 546465 */}
+    </div>
       </div>
     </>
   );

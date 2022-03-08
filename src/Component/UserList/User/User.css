@@ -1,7 +1,9 @@
 .UserInformation{
     display:inline-flex;
 }
-
+.userData{
+    width: 150px;
+}
 .email{
     font-size: 15px;
 }
@@ -12,8 +14,11 @@ td{
     width: 350px;
 }
 .status{
-    width: 200px;
+    width: 100px;
 }
 .access{
-    width: 200px;
+    width: 150px;
+}
+.lockandDeletebtn{
+    width: 50px;
 }

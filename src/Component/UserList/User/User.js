@@ -11,7 +11,7 @@ import { LockAndDeleteBtn } from "./LockAndDeleteButton/LockAndDeleteBtn";
 export const User = (props) => {
   return (
     <tr>
-      <td>
+      <td className="userData">
         <div className="UserInformation">
           <div className="userAvatar">
             {/* <img src={props.user.Image} alt="not display"></img> */}
@@ -33,7 +33,7 @@ export const User = (props) => {
       <td className="access">
       <Access access={props.user.Access}/>
       </td>
-      <td>
+      <td className="lockandDeletebtn">
         <LockAndDeleteBtn user={props.user}/>
       </td>
     </tr>
