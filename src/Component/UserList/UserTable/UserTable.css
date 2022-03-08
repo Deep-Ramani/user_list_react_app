@@ -1,0 +1,18 @@
+.col-8{
+    margin-left: 30px;
+}
+.table{
+    /* caption-side: none !important; */
+    border-collapse: inherit !important;
+}
+.table > :not(caption) > * > *{
+    border-bottom-width: 1px!important;
+}
+td{
+    border-style: none!important;
+}
+
+.table thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: none;
+    }

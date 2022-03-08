@@ -1,13 +1,14 @@
 .UserInformation{
     display:inline-flex;
 }
-.userAvatar>img{
-    height: 50px;
-    border-radius: 50%;
-}
+
 .email{
     font-size: 15px;
 }
 .UserNameAndEmail{
     margin-left: 15px;
+}
+td{
+    width: 350px;
+
 }
