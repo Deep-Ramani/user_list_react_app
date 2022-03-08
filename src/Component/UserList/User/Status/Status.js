@@ -13,7 +13,8 @@ export const Status = (props) => {
       <select className="status-item">
         {/* <option value="volvo">Active</option>
         <option value="saab">Inactive</option> */}
-       <option> {props.status}</option>
+       <option> Inactive</option>
+       <option> Active</option>
       </select>
     </div>
   );
