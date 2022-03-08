@@ -5,7 +5,7 @@ export const Status = (props) => {
   if(props.status === "Active")
   {
     return (
-      props.status
+     <div className="ActiveColor">{props.status}</div> 
     )
   }
   return (
