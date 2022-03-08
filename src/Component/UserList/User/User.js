@@ -5,6 +5,7 @@ import { Name } from "../../Name/Name";
 import "./User.css";
 import { Status } from "./Status/Status";
 import { Access } from "./Access/Access";
+import { LockAndDeleteBtn } from "./LockAndDeleteButton/LockAndDeleteBtn";
 
 
 export const User = (props) => {
@@ -29,8 +30,11 @@ export const User = (props) => {
       <td className="status">
       <Status status={props.user.Status}/>
       </td>
-      <td>
+      <td className="access">
       <Access access={props.user.Access}/>
+      </td>
+      <td>
+        <LockAndDeleteBtn user={props.user}/>
       </td>
     </tr>
   );
