@@ -3,6 +3,8 @@ import { Avatar } from "../../Avatar/Avatar";
 import { Email } from "../../Email/Email";
 import { Name } from "../../Name/Name";
 import "./User.css";
+import { Status } from "../Status/Status";
+
 
 export const User = (props) => {
   return (
@@ -22,6 +24,12 @@ export const User = (props) => {
               </div>
           </div>
         </div>
+      </td>
+      <td className="status">
+      <Status status={props.user.Status}/>
+      </td>
+      <td>
+     
       </td>
     </tr>
   );
