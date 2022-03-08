@@ -1,0 +1,41 @@
+const intialState = [
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/1-image.jpg',
+        Email : 'deepramani@gmail.com',
+
+    },
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/2-image.jpg',
+        Email : 'deepramani@gmail.com',
+    },
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/3-image.jpg',
+        Email : 'deepramani@gmail.com',
+    },
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/4-image.jpg',
+        Email : 'deepramani@gmail.com',
+    },
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/5-image.jpg',
+        Email : 'deepramani@gmail.com',
+    },
+    {
+        Name : "Deep Ramani",
+        Image : 'https://reqres.in/img/faces/6-image.jpg',
+        Email : 'deepramani@gmail.com',
+    }
+];
+
+const reducer = (state=intialState,action) =>{
+    switch(action.type){
+        default: return state;
+    }
+}
+
+export default reducer;
