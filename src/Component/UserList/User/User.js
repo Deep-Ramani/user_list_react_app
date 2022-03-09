@@ -6,39 +6,41 @@ import "./User.css";
 import { Status } from "./Status/Status";
 import { Access } from "./Access/Access";
 import { LockAndDeleteBtn } from "./LockAndDeleteButton/LockAndDeleteBtn";
-import  {useDispatch} from 'react-redux' 
+import { useDispatch } from "react-redux";
 import { userHover } from "../../../redux/actions/action";
-
 
 export const User = (props) => {
   const Dispatch = useDispatch();
 
   return (
     <tr>
-      <td className="userData" onClick={() => Dispatch(userHover(props.index))}>
+      <td
+        className="userData"
+        onMouseEnter={() => Dispatch(userHover(props.index))}
+      >
         <div className="UserInformation">
           <div className="userAvatar">
             {/* <img src={props.user.Image} alt="not display"></img> */}
-            <Avatar avatar={props.user.Image}/>
+            <Avatar avatar={props.user.Image} />
           </div>
           <div className="UserNameAndEmail">
             <div className="name">
               <Name name={props.user.Name} />
             </div>
             <div className="email">
-              <Email email={props.user.Email}/> 
-              </div>
+              <Email email={props.user.Email} />
+            </div>
           </div>
         </div>
       </td>
       <td className="status">
-      <Status status={props.user.Status}/>
+        <Status status={props.user.Status} />
       </td>
       <td className="access">
-      <Access access={props.user.Access}/>
+        <Access access={props.user.Access} />
       </td>
       <td className="lockandDeletebtn">
-        <LockAndDeleteBtn user={props.user}/>
+        <LockAndDeleteBtn user={props.user} />
       </td>
     </tr>
   );
