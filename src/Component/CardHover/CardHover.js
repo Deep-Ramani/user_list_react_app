@@ -4,6 +4,8 @@ import { Name } from "../Name/Name";
 import { useSelector } from "react-redux";
 import { Email } from "../Email/Email";
 import { ClicksReviewed } from "./ClicksReviewed/ClicksReviewed";
+import { MonthlyClicks } from "./MonthlyClicks/MonthlyClicks";
+import NoneHoverEmoji from '../../assets/images/NoneHoverEmoji.png'
 export const CardHover = () => {
   const users = useSelector((state) => state.users);
   const index = useSelector((state) => state.selectedIndex);
@@ -20,8 +22,12 @@ export const CardHover = () => {
         <div className="UserEmail">
           <Email email={users[index].Email} />
         </div>
-        <div className="Plan"><b>Your Plan: Standard</b></div>
-        <div className="btn-warning"><b>Active User</b></div>
+        <div className="Plan">
+          <b>Your Plan : Standard</b>
+        </div>
+        <div className="btn-warning">
+          <b>Active User</b>
+        </div>
         <div className="planuses">
           Plan Uses
           <div className="progress">
@@ -35,17 +41,8 @@ export const CardHover = () => {
           </div>
         </div>
         <div className="clicks">
-          {/* <div className="clicksreviewed">
-            2450 <br /> clicks reviewed
-          </div>
-          <div className="monthlyClicks">
-            5000 <br /> Monthly Clicks
-          </div> */}
-
           <tr>
-            
             <td>
-              
               <div className="clicksnumber">
                 <b className="clicksreviewed">
                   <ClicksReviewed
@@ -57,7 +54,10 @@ export const CardHover = () => {
             </td>
             <td>
               <div className="betweenborder">
-                <b className="monthlyclicks">4000</b> <br /> Monthly clicks
+                <b className="monthlyclicks">
+                  <MonthlyClicks monthlyclicks={users[index].MonthlyClicks} />
+                </b>{" "}
+                <br /> Monthly clicks
               </div>
             </td>
           </tr>
@@ -67,6 +67,10 @@ export const CardHover = () => {
   } else {
     return (
       <div className="CardHover1">
+        <div className="nonhoveremoji">
+        <img src={NoneHoverEmoji} alt="not display"/>
+          
+        </div>
         <div>I'll appear when you hover over the User.</div>
       </div>
     );
