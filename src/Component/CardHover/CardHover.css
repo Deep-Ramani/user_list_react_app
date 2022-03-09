@@ -1,19 +1,69 @@
-.CardHover{
-    margin: 0 auto;
-    padding: 100px;
+.CardHover {
+    margin-top: 100px;
+    padding: 20px;
+    /* padding-top: 150px; */
     /* position: fixed; */
     text-align: center;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+    box-shadow:  4px 14px 27px -3px #888888;
+    width: 300px;
+    height: 450px;
 }
-.AvatarImg1>img{
-    border-radius: 50%;
+.CardHover1 {
+  margin-top: 100px;
+  padding: 20px;
+  padding-top: 150px;
+  /* position: fixed; */
+  text-align: center;
+  /* border: 1px solid black; */
+  border-radius: 30px;
+  box-shadow:  4px 14px 27px -3px #888888;
+  width: 300px;
+  height: 450px;
+  
 }
-.progress-bar{
-    width: 50%;
-
+.AvatarImg1 > img {
+  border-radius: 50%;
 }
-.progress{
-    height: 10px!important;
+.progress-bar {
+  width: 60%;
+  
 }
-.clicks{
-    display: inline-flex;
+.progress {
+  height: 10px !important;
+  width: 231px;
+}
+.clicks {
+  display: inline-flex;
+  margin-top: 10px;
+}
+.btn-warning{
+    height: 50px;
+    padding-top: 15px;
+    width: 200px;
+    margin:0 auto;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.UserName{
+    margin-top:15px;
+}
+.UserEmail{
+    margin-top: 5px;
+    font-size: 15px;
+}
+.Plan{
+    margin-top: 5px;
+}
+.planuses{
+    margin-top: 20px;
+    float: inline-start;
+    text-align: left;
+    padding-left: 15px;
+    
+}
+.monthlyclicks{
+    border-left: 1px solid gray;
+    height: 50px;
 }
