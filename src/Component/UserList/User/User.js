@@ -6,12 +6,16 @@ import "./User.css";
 import { Status } from "./Status/Status";
 import { Access } from "./Access/Access";
 import { LockAndDeleteBtn } from "./LockAndDeleteButton/LockAndDeleteBtn";
+import  {useDispatch} from 'react-redux' 
+import { userHover } from "../../../redux/actions/action";
 
 
 export const User = (props) => {
+  const Dispatch = useDispatch();
+
   return (
     <tr>
-      <td className="userData">
+      <td className="userData" onClick={() => Dispatch(userHover(props.index))}>
         <div className="UserInformation">
           <div className="userAvatar">
             {/* <img src={props.user.Image} alt="not display"></img> */}
