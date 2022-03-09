@@ -1,38 +1,67 @@
 import React from "react";
 import "./CardHover.css";
+import { Name } from "../Name/Name";
+import { useSelector } from "react-redux";
+import { Email } from "../Email/Email";
 export const CardHover = () => {
-  return (
-    <div className="CardHover">
-      <div className="AvatarImg1">
-        <img
-          src="https://reqres.in/img/faces/1-image.jpg"
-          alt="not display"
-        ></img>
-      </div>
-      <div className="UserName">Deep Ramani</div>
-      <div className="UserEmail">deepramani@gmail.com</div>
-      <div className="Plan">Your Plan: Standard</div>
-      <div className="btn-primary">Active User</div>
-      <div>
-        Plan Uses
-        <div class="progress">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-valuenow="25"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
+  const users = useSelector((state) => state.users);
+  const index = useSelector((state) => state.selectedIndex);
+
+  if (typeof index === "number") {
+    return (
+      <div className="CardHover">
+        <div className="AvatarImg1">
+          <img src={users[index].Image} alt="not display"></img>
+        </div>
+        <div className="UserName">
+          <Name name={users[index].Name} />
+        </div>
+        <div className="UserEmail">
+          <Email email={users[index].Email} />
+        </div>
+        <div className="Plan">Your Plan: Standard</div>
+        <div className="btn-warning">Active User</div>
+        <div className="planuses">
+          Plan Uses
+          <div className="progress">
+            <div
+              className="progress-bar bg-warning"
+              role="progressbar"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+        <div className="clicks">
+
+          {/* <div className="clicksreviewed">
+            2450 <br /> clicks reviewed
+          </div>
+          <div className="monthlyClicks">
+            5000 <br /> Monthly Clicks
+          </div> */}
+
+          <tr>
+            <td>
+              <div>
+              2450 <br/> clicks reviewd
+              </div>
+            </td>
+            <td>
+              <div className="monthlyclicks"> 
+              4000 <br/> Monthly clicks
+              </div>
+            </td>
+          </tr>
         </div>
       </div>
-      <div className="clicks">
-      <div className="clicksreviewed">
-        2450  <br/> clicks reviewed
+    );
+  } else {
+    return (
+      <div className="CardHover1">
+        <div>I'll appear when you hover over the User.</div>
       </div>
-      <div className="monthlyClicks">
-        5000 <br/> Monthly Clicks
-      </div>
-      </div>
-    </div>
-  );
+    );
+  }
 };
