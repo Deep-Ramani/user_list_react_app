@@ -4,8 +4,8 @@ import { CardHover } from "../../CardHover/CardHover";
 import { User } from "../User/User";
 import './UserTable.css'
 
-const UserTable = () => {
-  const users = useSelector((state) => state);
+const UserTable = (props) => {
+  const users = useSelector((state) => state.users);
   return (
     <>
     <div className="col-12">  
@@ -19,8 +19,8 @@ const UserTable = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-              <User user={user} />
+            {users.map((user,index) => (
+              <User user={user} index={index} />
             ))}
           </tbody>
         </table>
