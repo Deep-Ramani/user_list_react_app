@@ -5,12 +5,13 @@ import { useSelector } from "react-redux";
 import { Email } from "../Email/Email";
 import { ClicksReviewed } from "./ClicksReviewed/ClicksReviewed";
 import { MonthlyClicks } from "./MonthlyClicks/MonthlyClicks";
-import NoneHoverEmoji from '../../assets/images/NoneHoverEmoji.png'
-import ActiveGreenBtn from '../../assets/images/activegreenbtn.png'
+import NoneHoverEmoji from "../../assets/images/NoneHoverEmoji.png";
+import ActiveGreenBtn from "../../assets/images/activegreenbtn.png";
 export const CardHover = () => {
   const users = useSelector((state) => state.users);
   const index = useSelector((state) => state.selectedIndex);
 
+  console.log(index);
   if (typeof index === "number") {
     return (
       <div className="CardHover">
@@ -18,10 +19,18 @@ export const CardHover = () => {
           <img src={users[index].Image} alt="not display"></img>
         </div>
         <div className="UserName">
-          <Name name={users[index].Name} />{
-
-            users[index].Status === "Active" ? <sup><img className="activegreenbtn" src={ActiveGreenBtn} alt="not display activegreenbtn"></img></sup> : ''
-          }
+          <Name name={users[index].Name} />
+          {users[index].Status === "Active" ? (
+            <sup>
+              <img
+                className="activegreenbtn"
+                src={ActiveGreenBtn}
+                alt="not display activegreenbtn"
+              ></img>
+            </sup>
+          ) : (
+            ""
+          )}
         </div>
         <div className="UserEmail">
           <Email email={users[index].Email} />
@@ -45,26 +54,19 @@ export const CardHover = () => {
           </div>
         </div>
         <div className="clicks">
-          <tr>
-            <td>
-              <div className="clicksnumber">
-                <b className="clicksreviewed">
-                  <ClicksReviewed
-                    clicksreviewed={users[index].ClicksReviewed}
-                  />
-                </b>{" "}
-                <br /> clicks reviewed
-              </div>
-            </td>
-            <td>
-              <div className="betweenborder">
-                <b className="monthlyclicks">
-                  <MonthlyClicks monthlyclicks={users[index].MonthlyClicks} />
-                </b>{" "}
-                <br /> Monthly clicks
-              </div>
-            </td>
-          </tr>
+          <div className="clicksnumber">
+            <b className="clicksreviewed">
+              <ClicksReviewed clicksreviewed={users[index].ClicksReviewed} />
+            </b>
+            <br /> clicks reviewed
+          </div>
+
+          <div className="betweenborder">
+            <b className="monthlyclicks">
+              <MonthlyClicks monthlyclicks={users[index].MonthlyClicks} />
+            </b>
+            <br /> Monthly clicks
+          </div>
         </div>
       </div>
     );
@@ -72,9 +74,9 @@ export const CardHover = () => {
     return (
       <div className="CardHover1">
         <div className="nonhoveremoji">
-        <img src={NoneHoverEmoji} alt="not display"/>
-          
+          <img src={NoneHoverEmoji} alt="not display" />
         </div>
+        <br />
         <div>I'll appear when you hover over the User.</div>
       </div>
     );
