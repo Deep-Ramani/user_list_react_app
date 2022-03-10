@@ -2,6 +2,7 @@ const intialState = {
   selectedIndex: null,
   users: [
     {
+      
       Name: "Deep Ramani0",
       Image: "https://reqres.in/img/faces/1-image.jpg",
       Email: "deepramani0@gmail.com",
@@ -107,6 +108,23 @@ const reducer = (state = intialState, action) => {
   switch (action.type) {
     case "onMouseEnter":
       return { ...state, selectedIndex: action.payload };
+
+    case "DeleteUser":
+      let deleteusers = [...state.users];
+      let sameIndex = state.selectedIndex;
+      if (state.selectedIndex) {
+        if (state.selectedIndex === action.payload) {
+          sameIndex = null;
+        } else {
+          sameIndex--;
+        }
+      }
+      deleteusers = deleteusers.filter((user,index)=>{
+        return !(index === action.payload)
+      })
+
+      return { ...state, users : deleteusers, selectedIndex: sameIndex };
+      
     default:
       return state;
   }
