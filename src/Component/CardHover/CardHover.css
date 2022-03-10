@@ -51,6 +51,7 @@
 }
 .UserName {
   margin-top: 15px;
+  display: inline-flex;
 }
 .UserEmail {
   margin-top: 5px;
@@ -84,4 +85,8 @@
 }
 .nonhoveremoji>img{
   width: 200px;
+}
+.activegreenbtn{
+  width: 10px;
+  height: 10px;
 }
