@@ -1,12 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { CardHover } from "../../CardHover/CardHover";
 import { User } from "../User/User";
 import './UserTable.css'
 
-const UserTable = () => {
-  const users = useSelector((state) => state);
+const UserTable = (props) => {
+  const users = useSelector((state) => state.users);
   return (
     <>
+    <div className="col-12">  
       <div className="col-8">
         <table className="table">
           <thead>
@@ -17,11 +19,16 @@ const UserTable = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-              <User user={user} />
+            {users.map((user,index) => (
+              <User user={user} index={index} />
             ))}
           </tbody>
         </table>
+      </div>
+
+    <div className="col-4">
+             <CardHover/>
+    </div>
       </div>
     </>
   );
