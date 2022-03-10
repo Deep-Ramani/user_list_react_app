@@ -4,3 +4,10 @@ export const userHover = (index) => {
     payload: index
   };
 };
+export const DeleteUser = (index) => {
+  console.log(index);
+  return{
+    type:"DeleteUser",
+    payload :index,
+  };
+};
