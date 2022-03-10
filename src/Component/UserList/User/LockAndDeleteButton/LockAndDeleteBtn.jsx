@@ -10,7 +10,7 @@ export const LockAndDeleteBtn = (props) => {
         );
     } else {
         return (
-       <Trash2/>
+       <Trash2 onClick={props.onClick}/>
         )
     }
 }
