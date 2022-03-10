@@ -22,8 +22,11 @@
   width: 300px;
   height: 450px;
 }
+
 .AvatarImg1 > img {
   border-radius: 50%;
+  width: 120px;
+  height: 120px;
 }
 .progress-bar {
   width: 60%;
@@ -74,7 +77,6 @@
 }
 .clicksreviewed {
   font-size: x-large;
-  /* text-align:start; */
 }
 .monthlyclicks {
   font-size: x-large;
@@ -82,11 +84,12 @@
 .clicksnumber {
   text-align: left;
   margin-left: 15px;
+  margin-right: 10px;
 }
-.nonhoveremoji>img{
+.nonhoveremoji > img {
   width: 200px;
 }
-.activegreenbtn{
+.activegreenbtn {
   width: 10px;
   height: 10px;
 }
