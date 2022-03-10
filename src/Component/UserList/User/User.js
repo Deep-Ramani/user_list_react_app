@@ -8,6 +8,7 @@ import { Access } from "./Access/Access";
 import { LockAndDeleteBtn } from "./LockAndDeleteButton/LockAndDeleteBtn";
 import { useDispatch } from "react-redux";
 import { userHover } from "../../../redux/actions/action";
+import { DeleteUser } from "../../../redux/actions/action";
 
 export const User = (props) => {
   const Dispatch = useDispatch();
@@ -40,8 +41,9 @@ export const User = (props) => {
         <Access access={props.user.Access} />
       </td>
       <td className="lockandDeletebtn">
-        <LockAndDeleteBtn user={props.user} />
+        <LockAndDeleteBtn user={props.user} onClick={()=>Dispatch(DeleteUser(props.index))} />
       </td>
+      
     </tr>
   );
 };

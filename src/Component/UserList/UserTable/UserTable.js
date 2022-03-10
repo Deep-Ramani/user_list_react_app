@@ -20,7 +20,7 @@ const UserTable = (props) => {
           </thead>
           <tbody>
             {users.map((user,index) => (
-              <User user={user} index={index} />
+              <User key={index} user={user} index={index} />
             ))}
           </tbody>
         </table>
