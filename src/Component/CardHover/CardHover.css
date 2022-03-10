@@ -31,7 +31,7 @@
   
 }
 .progress {
-  height: 10px !important;
+  height: 7px !important;
   width: 231px;
 }
 .clicks {
@@ -40,11 +40,16 @@
 }
 .btn-warning{
     height: 50px;
-    padding-top: 15px;
+    padding-top: 10px;
     width: 200px;
+    font-size: 20px;
+    color: white;
     margin:0 auto;
     margin-top: 5px;
     border-radius: 5px;
+}
+.btn-warning>b{
+  color: whitesmoke;
 }
 .UserName{
     margin-top:15px;
@@ -63,7 +68,20 @@
     padding-left: 15px;
     
 }
-.monthlyclicks{
+.betweenborder{
     border-left: 1px solid gray;
-    height: 50px;
+    height: 60px;
+    text-align: left;
+    padding-left: 10px;
+}
+.clicksreviewed{
+  font-size: x-large;
+  /* text-align:start; */
+}
+.monthlyclicks{
+  font-size: x-large;
+}
+.clicksnumber{
+  text-align: left;
+  margin-left: 15px;
 }

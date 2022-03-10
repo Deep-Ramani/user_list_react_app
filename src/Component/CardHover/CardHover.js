@@ -3,6 +3,7 @@ import "./CardHover.css";
 import { Name } from "../Name/Name";
 import { useSelector } from "react-redux";
 import { Email } from "../Email/Email";
+import { ClicksReviewed } from "./ClicksReviewed/ClicksReviewed";
 export const CardHover = () => {
   const users = useSelector((state) => state.users);
   const index = useSelector((state) => state.selectedIndex);
@@ -19,8 +20,8 @@ export const CardHover = () => {
         <div className="UserEmail">
           <Email email={users[index].Email} />
         </div>
-        <div className="Plan">Your Plan: Standard</div>
-        <div className="btn-warning">Active User</div>
+        <div className="Plan"><b>Your Plan: Standard</b></div>
+        <div className="btn-warning"><b>Active User</b></div>
         <div className="planuses">
           Plan Uses
           <div className="progress">
@@ -34,7 +35,6 @@ export const CardHover = () => {
           </div>
         </div>
         <div className="clicks">
-
           {/* <div className="clicksreviewed">
             2450 <br /> clicks reviewed
           </div>
@@ -43,14 +43,21 @@ export const CardHover = () => {
           </div> */}
 
           <tr>
+            
             <td>
-              <div>
-              2450 <br/> clicks reviewd
+              
+              <div className="clicksnumber">
+                <b className="clicksreviewed">
+                  <ClicksReviewed
+                    clicksreviewed={users[index].ClicksReviewed}
+                  />
+                </b>{" "}
+                <br /> clicks reviewed
               </div>
             </td>
             <td>
-              <div className="monthlyclicks"> 
-              4000 <br/> Monthly clicks
+              <div className="betweenborder">
+                <b className="monthlyclicks">4000</b> <br /> Monthly clicks
               </div>
             </td>
           </tr>
