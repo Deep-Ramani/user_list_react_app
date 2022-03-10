@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/user_list_react_app/static/css/main.92b00327.css",
-    "main.js": "/user_list_react_app/static/js/main.1d2df6b3.js",
+    "main.css": "/user_list_react_app/static/css/main.c344e88c.css",
+    "main.js": "/user_list_react_app/static/js/main.059434e8.js",
     "static/js/787.3dd5ef63.chunk.js": "/user_list_react_app/static/js/787.3dd5ef63.chunk.js",
     "static/media/activegreenbtn.png": "/user_list_react_app/static/media/activegreenbtn.268623f80b7b4ba65967.png",
     "static/media/NoneHoverEmoji.png": "/user_list_react_app/static/media/NoneHoverEmoji.bccf1aa53a12bce2013a.png",
     "index.html": "/user_list_react_app/index.html",
-    "main.92b00327.css.map": "/user_list_react_app/static/css/main.92b00327.css.map",
-    "main.1d2df6b3.js.map": "/user_list_react_app/static/js/main.1d2df6b3.js.map",
+    "main.c344e88c.css.map": "/user_list_react_app/static/css/main.c344e88c.css.map",
+    "main.059434e8.js.map": "/user_list_react_app/static/js/main.059434e8.js.map",
     "787.3dd5ef63.chunk.js.map": "/user_list_react_app/static/js/787.3dd5ef63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92b00327.css",
-    "static/js/main.1d2df6b3.js"
+    "static/css/main.c344e88c.css",
+    "static/js/main.059434e8.js"
   ]
 }
