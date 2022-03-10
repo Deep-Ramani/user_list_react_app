@@ -1,5 +1,6 @@
 {
   "name": "user_list_react_app",
+  "homepage": "https://Deep-Ramani.github.io/user_list_react_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +8,8 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^3.2.3",
+    "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.0",
@@ -18,6 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1"
   }
 }
