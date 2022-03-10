@@ -20,5 +20,5 @@ td{
     border-bottom: none;
 }
 .col-4{
-    width: 30%;
+    width: 30%!important;
 }
