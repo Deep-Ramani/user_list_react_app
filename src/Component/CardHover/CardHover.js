@@ -6,6 +6,7 @@ import { Email } from "../Email/Email";
 import { ClicksReviewed } from "./ClicksReviewed/ClicksReviewed";
 import { MonthlyClicks } from "./MonthlyClicks/MonthlyClicks";
 import NoneHoverEmoji from '../../assets/images/NoneHoverEmoji.png'
+import ActiveGreenBtn from '../../assets/images/activegreenbtn.png'
 export const CardHover = () => {
   const users = useSelector((state) => state.users);
   const index = useSelector((state) => state.selectedIndex);
@@ -17,7 +18,10 @@ export const CardHover = () => {
           <img src={users[index].Image} alt="not display"></img>
         </div>
         <div className="UserName">
-          <Name name={users[index].Name} />
+          <Name name={users[index].Name} />{
+
+            users[index].Status === "Active" ? <sup><img className="activegreenbtn" src={ActiveGreenBtn} alt="not display activegreenbtn"></img></sup> : ''
+          }
         </div>
         <div className="UserEmail">
           <Email email={users[index].Email} />
